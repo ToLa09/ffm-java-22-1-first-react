@@ -1,18 +1,15 @@
 import React from 'react';
 import "./CharacterCard.css"
+import {CharacterModel} from "./CharacterModel";
 
-type Props = {
-    name: string,
-    img: string,
-    origin: string,
-}
-
-function CharacterCard(props: Props) {
+function CharacterCard(props: {
+    character: CharacterModel
+}) {
     return (
         <section>
-            <h2>{props.name}</h2>
-            <img src={props.img}/>
-            <h3>{props.origin}</h3>
+            <h2>{props.character.name}</h2>
+            <img src={props.character.image} alt={"Rick and Morty Character"}/>
+            <h3>{props.character.origin.name}</h3>
         </section>
     );
 }
