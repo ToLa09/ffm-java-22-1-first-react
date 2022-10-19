@@ -1,0 +1,35 @@
+
+section {
+    border: solid 2px black;
+    border-radius: 2pc;
+    box-shadow: 8px 8px #3c3c3c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+}
+img{
+    width: 250px;
+    height: auto;
+}
+
+@media(max-width: 1000px) {
+    section {
+        width: 150px;
+        margin: 10px;
+    }
+    h2 {
+        font-size: 1.0rem;
+        text-align: center;
+    }
+    h3 {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    img {
+        width: 100px;
+    }
+}
