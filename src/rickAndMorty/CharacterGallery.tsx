@@ -1,8 +1,9 @@
 import React from 'react';
 import CharacterCard from "./CharacterCard";
 import "./CharacterGallery.css"
+import {nanoid} from "nanoid";
 
-function CharacterGallery(props: {}) {
+function CharacterGallery() {
 
     const characters = [
         {
@@ -1136,10 +1137,11 @@ function CharacterGallery(props: {}) {
         <main>
             {
                 characters.map(character => {
-                     return <CharacterCard
+                    return <CharacterCard
                         name={character.name}
                         img={character.image}
-                        origin={character.origin.name}/>
+                        origin={character.origin.name}
+                        key={nanoid()}/>
                 })
             }
         </main>

@@ -10,13 +10,15 @@ section {
     margin: 20px;
     width: 300px;
     height: auto;
+    /*flex-grow: 1;*/
+    /*font-size: 1.7vw;*/
 }
 img{
     width: 250px;
     height: auto;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1024px) {
     section {
         width: 150px;
         margin: 10px;
