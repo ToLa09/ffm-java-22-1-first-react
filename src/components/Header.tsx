@@ -34,10 +34,11 @@ export default function Header(props: {
     return <>
         <header>
             <h1>Rick and Morty App 9000</h1>
-            <div>
+            <div className="pageButtons">
                 <button onClick={props.nextPage}>Nächste Seite</button>
                 <button onClick={props.prevPage}>Vorherige Seite</button>
             </div>
+            <h4>Name zum Filtern eingeben:</h4>
             <input type="text" onChange={onChange}/>
         </header>
     </>

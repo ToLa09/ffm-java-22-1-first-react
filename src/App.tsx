@@ -49,6 +49,7 @@ function App() {
 
     return <>
     <Header getCharacters={getCharacters} nextPage={renderNextPage} prevPage={renderPrevPage}/>
+    <h4>{numberOfPages} Seiten mir Charakteren gefunden:</h4>
     <CharacterGallery characters={characters}/>
     <Counter/>
   </>
