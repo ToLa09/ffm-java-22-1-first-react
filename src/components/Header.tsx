@@ -2,27 +2,43 @@ import React, {useState} from "react";
 import "./css/Header.css"
 
 export default function Header(props: {
-    callback: (url: string) => void
-    nextPage: () => string[]
-    prevPage: () => string[]
+    getCharacters: (url: string) => void
+    nextPage: () => void
+    prevPage: () => void
 }){
-    let [nextPageNumber, setNextPageNumber] = useState<string>("2")
+    // let [pageNumber, setPageNumber] = useState<number>(1)
 
-    function nextPage() {
-        setNextPageNumber(props.nextPage()[1].split("=")[1])
+    // function nextPage() {
+    //     if (pageNumber < props.numberOfPages) {
+    //         setPageNumber(pageNumber + 1)
+    //     } else {
+    //         setPageNumber(1)
+    //     }
+    //     props.getCharacters(pageNumber)
+    // }
+    //
+    // function prevPage() {
+    //     if(pageNumber > 1) {
+    //         setPageNumber(pageNumber-1)
+    //     } else {
+    //         setPageNumber(props.numberOfPages)
+    //     }
+    //     props.getCharacters(pageNumber)
+    // }
+
+    const onChange = (event: any) => {
+        props.getCharacters("https://rickandmortyapi.com/api/character/?name="+event.target.value)
     }
 
-    function prevPage() {
-        props.prevPage()
-    }
 
     return <>
         <header>
             <h1>Rick and Morty App 9000</h1>
             <div>
-                <button onClick={nextPage}>Seite {nextPageNumber}</button>
-                <button onClick={prevPage}>Rückwärts</button>
+                <button onClick={props.nextPage}>Nächste Seite</button>
+                <button onClick={props.prevPage}>Vorherige Seite</button>
             </div>
+            <input type="text" onChange={onChange}/>
         </header>
     </>
 }
