@@ -1,8 +1,8 @@
 import React from 'react';
 import CharacterCard from "./CharacterCard";
-import "./CharacterGallery.css"
+import "./css/CharacterGallery.css"
 import {nanoid} from "nanoid";
-import {CharacterModel} from "./CharacterModel";
+import {CharacterModel} from "../model/CharacterModel";
 
 function CharacterGallery(props: {
     characters: CharacterModel[]

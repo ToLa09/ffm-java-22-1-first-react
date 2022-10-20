@@ -1,6 +1,6 @@
 import React from 'react';
-import "./CharacterCard.css"
-import {CharacterModel} from "./CharacterModel";
+import "./css/CharacterCard.css"
+import {CharacterModel} from "../model/CharacterModel";
 
 function CharacterCard(props: {
     character: CharacterModel

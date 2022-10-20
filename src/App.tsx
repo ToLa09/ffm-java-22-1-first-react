@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from "./rickAndMorty/Header";
-import CharacterGallery from "./rickAndMorty/CharacterGallery";
+import Header from "./components/Header";
+import CharacterGallery from "./components/CharacterGallery";
+import Counter from "./components/Counter";
 
 function App() {
 
@@ -1135,6 +1136,7 @@ function App() {
   return <>
     <Header/>
     <CharacterGallery characters={characters}/>
+    <Counter/>
   </>
 }
 
